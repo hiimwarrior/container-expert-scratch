@@ -10,9 +10,11 @@
 #? pasa leer variable de entorno y asignar un valor default si no existe
 # :${VARIABLE:-"default"}
 
+: ${env_var:="Default msg"}
 
 count=0
 while true;do
+  echo "[INFO] transaction #$(count)" >> /tmp/transaction.log
   echo "[${count}] Hola Container bootcamp experts! 🐳 🤓"
   count=$(( count + 1))
   sleep 1

@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-web2
+  labels:
+    role: myrole
+    team: sre
+# specification
+spec:
+  containers:
+    - name: web
+      image: httpd:alpine
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
+    - name: db
+      image: mysql
+      ports:
+          - name: mysql
+            containerPort: 3306
+            protocol: TCP
+      env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: mypasswd
+    - name: who
+      image: jwilder/whoami
+      ports:
+          - name: who
+            containerPort: 8000
