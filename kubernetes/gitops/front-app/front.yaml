@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: 858786267070.dkr.ecr.us-east-2.amazonaws.com/warrior/python
+        image: 858786267070.dkr.ecr.us-east-2.amazonaws.com/warrior/python:685d25e
         ports:
         - name: http
           containerPort: 8080
