@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: kontinu/python-expert:v1.5
+        image: 858786267070.dkr.ecr.us-east-2.amazonaws.com/warrior/python
         ports:
         - name: http
           containerPort: 8080
